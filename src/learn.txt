@@ -62,4 +62,16 @@ const (isValid:emailisVaid} = emailState
 ***notes  
 when  adding objects as dependency access the property is the object, cause some objects loops
 
+
+
+USING REACT CREATECONTEXT and REACT USECONTEXT HOOK
 ######################################################
+
+​​Bad -- Props drilling Behind the scence state storage  
+-- Kebab case
+TO USE CONTEXT
+you first provide -- tells react there is a context
+you then consume it
+Provider --- all jsx elements in it access all its properites(also sets a value)
+Consumer - this cosumers the value provided by Provider
+ or Listen to it -using React useContext Hook
