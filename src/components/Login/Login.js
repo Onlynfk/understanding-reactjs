@@ -3,14 +3,14 @@ import React, { useState, useEffect, useReducer, useContext} from 'react';
 import Card from '../UI/Card/Card';
 import classes from './Login.module.css';
 import Button from '../UI/Button/Button';
-import AuthContext, { AuthContextProvider } from '../store/auth-context';
+import AuthContext from '../store/auth-context';
 
 
 
 
 // doesnt't need to interact with the component fucntions
 const useEmailReducer = (state, action) =>{
-  if(action.type == 'USER_INPUT'){
+  if(action.type === 'USER_INPUT'){
     return {
       value : action.val, 
       isValid : action.val.includes('@')
@@ -19,7 +19,7 @@ const useEmailReducer = (state, action) =>{
 
   }
 
-  if(action.type == 'INPUT_BLUR'){
+  if(action.type === 'INPUT_BLUR'){
     return {  
       value : state.value, // access to the last value state
       isValid :  true,
@@ -35,7 +35,7 @@ const useEmailReducer = (state, action) =>{
 };
 
 const  usePaswordReducer = (state, action) =>{
-  if(action.type == 'USER_INPUT'){
+  if(action.type === 'USER_INPUT'){
     return {
       value : action.val, 
       isValid : action.val.trim().length > 6,
@@ -46,7 +46,7 @@ const  usePaswordReducer = (state, action) =>{
 
   }
 
-  if(action.type == 'INPUT_BLUR'){
+  if(action.type === 'INPUT_BLUR'){
     return {  
       value : state.value, // access to the last value state
       isValid :  true,

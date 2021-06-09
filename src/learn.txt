@@ -75,3 +75,27 @@ you then consume it
 Provider --- all jsx elements in it access all its properites(also sets a value)
 Consumer - this cosumers the value provided by Provider
  or Listen to it -using React useContext Hook
+
+
+
+USECONTEXT HOOK
+#####################################################
+
+​​component wide object to mange state  and functioncool!!!!!!!!!!!only 
+when specifici  you use contextr
+
+#notes
+props for configurations
+useContext for state managment
+- it should not be used to replace all compoents communictaion and props
+- oonly used when needed when there is serious prop drilling
+#cons of react context
+- is not optimized for high frequency changes
+
+RULES OF USING HOOKS
+###########################
+- only call react hooks in react components  and custom hooks
+- don't call hooks at the top level eg in nested functions
+- don't call then in any book component
+- you must = nit add everything in to a useeffect think!
+
