@@ -1,0 +1,27 @@
+ReactSnippets/README.md at master · jinsihou19/ReactSnippets
+https://github.com/jinsihou19/ReactSnippets/blob/master/README.md
+
+​using useEffect 
+runs after very component state changes
+no dependencies -- runs only once 
+
+ localstorage pretty cool
+
+
+useEffect with no dependencies runs only once
+useEffect handles side effect  ( forms change, response form http)
+--- a response to some other action ins useEffect
+
+notes 
+-- built in api, component-intrnal variable should not be added as dependies yeah !!
+
+or stuff like declared variables that really depends on it __
+
+​useEffect cleanup function !!!!!!!​
+Debouncing (okay !!)
+using setTimeout() --- 
+
+the cleanup function runs after very next side effect
+execution
+
+
