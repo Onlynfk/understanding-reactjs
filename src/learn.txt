@@ -1,3 +1,7 @@
+
+USEFFECT BASICS WITH LOCALSTORAGE AND DEBOUNCING
+
+######################################################
 ReactSnippets/README.md at master · jinsihou19/ReactSnippets
 https://github.com/jinsihou19/ReactSnippets/blob/master/README.md
 
@@ -25,3 +29,35 @@ the cleanup function runs after very next side effect
 execution
 
 
+USEFFECT WITH OBJECT DESTRUCTING AND USEREDUCER
+
+#####################################################################
+ReactSnippets/README.md at master · jinsihou19/ReactSnippets
+https://github.com/jinsihou19/ReactSnippets/blob/master/README.md
+
+​​Introduction to useReducer() -- state managment
+
+if you update a state that depends on another state
+then nerge it with one state
+
+understanding  useReducer
+
+const (state, dispatchfn) = useReducer(reducerFn, initialState, initFn);
+
+-state - snapshot of the state
+-dispatchfn - trgiger an update of the state
+-reducerfn - ( trgigers auto, once an action is dispatched( via dispatchfn()) - it recieves te latest state snapshot and shouf return new, updated state 
+(prevState, action) => newState
+-initlalState
+
+reducerFn call - doesnt't need to interact with the component fucntions
+
+
+​​object destructing 
+add an alias  ----> oaky need to know thes
+okay allais is when you take sth from sth and store in another thing inside that sth
+ -- is called an alia s assignemt
+const (isValid:emailisVaid} = emailState
+
+
+######################################################
