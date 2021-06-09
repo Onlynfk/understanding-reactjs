@@ -59,5 +59,7 @@ okay allais is when you take sth from sth and store in another thing inside that
  -- is called an alia s assignemt
 const (isValid:emailisVaid} = emailState
 
+***notes  
+when  adding objects as dependency access the property is the object, cause some objects loops
 
 ######################################################
