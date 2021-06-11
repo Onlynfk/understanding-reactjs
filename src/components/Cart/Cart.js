@@ -7,22 +7,24 @@ import CartItem from './CartItem/CartItem';
 
 
 function Cart(props) {
-    const carCtx = useContext(CartContext)
+    const cartCtx = useContext(CartContext)
     
-    const totalAmount = `$${carCtx.totalAmount.toFixed(2)}`; // two decimal places
-    const hasItems = carCtx.items.length >  0;
+    const totalAmount = `$${cartCtx.totalAmount.toFixed(2)}`; // two decimal places
+    const hasItems = cartCtx.items.length >  0;
   
 
     const  cartItemRemoveHandler = (id)=>{
+      cartCtx.removeItem(id)
       
     }
     const  cartItemAddHandler = (item)=>{
+      cartCtx.addItem({...item, amount:1})
       
     }
 
     const cartItems = (
         <ul className={classes['cart-items']}>
-          {carCtx.items.map((item) => (
+          {cartCtx.items.map((item) => (
             <CartItem
             key={item.id}
             name={item.name}
