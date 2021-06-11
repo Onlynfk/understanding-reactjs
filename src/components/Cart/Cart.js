@@ -25,7 +25,7 @@ function Cart(props) {
           {carCtx.items.map((item) => (
             <CartItem
             key={item.id}
-            name={item.price}
+            name={item.name}
             price={item.price}
             amount={item.amount}
             onRemove={cartItemRemoveHandler.bind(null, item.id)}
