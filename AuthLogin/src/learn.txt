@@ -2,24 +2,20 @@
 USEFFECT BASICS WITH LOCALSTORAGE AND DEBOUNCING
 
 ######################################################
-ReactSnippets/README.md at master · jinsihou19/ReactSnippets
-https://github.com/jinsihou19/ReactSnippets/blob/master/README.md
 
 ​using useEffect 
 runs after very component state changes
-no dependencies -- runs only once 
 
- localstorage pretty cool
-
+localstorage pretty cool with useffect
 
 useEffect with no dependencies runs only once
 useEffect handles side effect  ( forms change, response form http)
---- a response to some other action ins useEffect
+--- a response to some other action is useEffect
 
 notes 
--- built in api, component-intrnal variable should not be added as dependies yeah !!
+-- built in api, component-internal variable should not be added as dependies yeah !!
 
-or stuff like declared variables that really depends on it __
+stuffs like declared variables that really depends on it should be added  __
 
 ​useEffect cleanup function !!!!!!!​
 Debouncing (okay !!)
@@ -32,8 +28,6 @@ execution
 USEFFECT WITH OBJECT DESTRUCTING AND USEREDUCER
 
 #####################################################################
-ReactSnippets/README.md at master · jinsihou19/ReactSnippets
-https://github.com/jinsihou19/ReactSnippets/blob/master/README.md
 
 ​​Introduction to useReducer() -- state managment
 
@@ -42,25 +36,25 @@ then nerge it with one state
 
 understanding  useReducer
 
-const (state, dispatchfn) = useReducer(reducerFn, initialState, initFn);
+const (state, dispatchfn) = useReducer(reducerFn, initialState, !initFn);
 
 -state - snapshot of the state
 -dispatchfn - trgiger an update of the state
--reducerfn - ( trgigers auto, once an action is dispatched( via dispatchfn()) - it recieves te latest state snapshot and shouf return new, updated state 
+-reducerfn - ( trgigers auto, once an action is dispatched( via dispatchfn()) - it recieves te latest state snapshot and then returns new updated state 
 (prevState, action) => newState
 -initlalState
 
-reducerFn call - doesnt't need to interact with the component fucntions
+reducerFn call - doesnt't need to interact with the component fucntions - can be outdside the component body
 
 
 ​​object destructing 
-add an alias  ----> oaky need to know thes
+add an alias  ----> okay need to know thes
 okay allais is when you take sth from sth and store in another thing inside that sth
- -- is called an alia s assignemt
+ -- is called an alias assignemt
 const (isValid:emailisVaid} = emailState
 
 ***notes  
-when  adding objects as dependency access the property is the object, cause some objects loops
+when  adding objects as dependency access the property in the object, cause some objects loops
 
 
 
@@ -68,27 +62,27 @@ USING REACT CREATECONTEXT and REACT USECONTEXT HOOK
 ######################################################
 
 ​​Bad -- Props drilling Behind the scence state storage  
--- Kebab case
+-- Kebab case use for naming hooks eg (auth-context)
 TO USE CONTEXT
 you first provide -- tells react there is a context
 you then consume it
 Provider --- all jsx elements in it access all its properites(also sets a value)
 Consumer - this cosumers the value provided by Provider
- or Listen to it -using React useContext Hook
+ or Listen to it - using React useContext Hook
 
 
 
 USECONTEXT HOOK
 #####################################################
 
-​​component wide object to mange state  and functioncool!!!!!!!!!!!only 
-when specifici  you use contextr
+​​component wide object to mange state  and functionality cool!!!!!!!!!!!
+only when specific in  cases  you are to use context
 
 #notes
 props for configurations
 useContext for state managment
 - it should not be used to replace all compoents communictaion and props
-- oonly used when needed when there is serious prop drilling
+- only used when needed when there is serious prop drilling
 #cons of react context
 - is not optimized for high frequency changes
 
@@ -97,5 +91,33 @@ RULES OF USING HOOKS
 - only call react hooks in react components  and custom hooks
 - don't call hooks at the top level eg in nested functions
 - don't call then in any book component
-- you must = nit add everything in to a useeffect think!
+- you must = not add everything in to a useeffect think!
 
+
+REACT CREATE PORTAL
+################################
+used: when building sth lik backdrop
+​create create portal from ReactDom
+how react works
+
+understanding vuer
+Reactdom brings stuff to the screen
+
+​​rexecuting children components not need is a total waste
+that;s while one use conditions
+
+REACT MENO  
+###############################
+
+React.memo() 
+- react compare the props value of a components receiving props from a parent
+ and compares in other to render it only when those props changes
+
+rendering or comparing props ?
+​uses a primitve comparing alogrithm the
+
+USECALLBACK HOOK
+##########################
+ UseCallBack 
+It allow you to save a function so you can reuse itpoints 
+objects to objectshelps to use na object in usecallbsck
