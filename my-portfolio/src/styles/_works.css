@@ -33,11 +33,13 @@
 }
 
 .works__bg:hover {
-  color: white;
   transition: all 0.2s;
   transform: scale(1);
-  box-shadow: 0 4px 60px rgba(9, 10, 112, 0.5);
-
+  box-shadow: 0 4px 60px rgba(14, 16, 158, 0.5);
+  padding: 10px;
+  background-color: #23292c;
+  color: white;
+  font-weight: 200;
 }
 .works__bg:hover .button_me {
   color: white;
@@ -47,7 +49,6 @@
   padding: 5px;
   margin: 4px;
   font-size: 12px;
-
 }
 
 .works__bg .button_me {
