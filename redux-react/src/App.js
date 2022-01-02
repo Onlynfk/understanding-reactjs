@@ -1,55 +1,28 @@
-import { Fragment, useEffect } from 'react';
-import { useSelector, useDispatch } from 'react-redux';
+import { Fragment, useEffect } from "react";
+import { useSelector, useDispatch } from "react-redux";
+import Input from "./components/Input";
+import TodoItem from "./components/TodoItem";
 
-import Cart from './components/Cart/Cart';
-import Layout from './components/Layout/Layout';
-import Products from './components/Shop/Products';
-import Notification from './components/UI/Notification';
-import { sendCartData, fetchCartData } from './store/cart-actions';
-
-let isInitial = true;
+import "./App.css";
 
 function App() {
   const dispatch = useDispatch();
-  const cart = useSelector((state) => state.cart);
-  const notification = useSelector((state) => state.ui.notification);
-  const showCart = useSelector((state) => state.ui.cartVisibile);
-
-
-
-  useEffect(() =>{
-    dispatch(fetchCartData());
-
-  }, [dispatch])
-
-
-  useEffect(() => {
-    if (isInitial) {
-      isInitial = false;
-      return;
-    }
-
-    if(cart.changed){
-      dispatch(sendCartData(cart));
-    }
-
-
-  }, [cart, dispatch]);
 
   return (
-    <Fragment>
-      {notification && (
-        <Notification
-          status={notification.status}
-          title={notification.title}
-          message={notification.message}
-        />
-      )}
-      <Layout>
-        {showCart && <Cart />}
-        <Products />
-      </Layout>
-    </Fragment>
+    <div class="main">
+      <div class="content">
+        <div class="tasks">
+          <h2>My Todo</h2>
+
+          <div class="scroll p-3 scrollable-element">
+           <TodoItem/>
+          </div>
+        </div>
+        
+
+        <Input />
+      </div>
+    </div>
   );
 }
 

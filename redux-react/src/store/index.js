@@ -1,14 +1,11 @@
 import {configureStore} from '@reduxjs/toolkit';
-import uiSlice from './ui-slice';
-import cartSlice from './cart-slice';
+import todoSlice from '../features/todoSlice';
 
 const store = configureStore({
     // map of reducer -- need a key
     // or single reducer
     reducer:{
-        ui:uiSlice.reducer,
-        cart:cartSlice.reducer
-
+        todos: todoSlice.reducer, 
     }
 })
 

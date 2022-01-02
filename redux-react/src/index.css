@@ -1,31 +1,206 @@
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap');
-
-* {
-  box-sizing: border-box;
-}
-
+@import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200;400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;1,100&display=swap");
 html {
-  font-family: 'Noto Sans JP', sans-serif;
+  font-size: 100%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+          margin: 0;
+    
+}
 body {
+  display:grid;
+  place-items: center;
+  width: 100vw;
+  height: 100vh;
+  color:black;
+
   margin: 0;
-  background-color: #3f3f3f;
+  padding: 0;
+  line-height: 1.3;
+  font-weight: 300;
+  background: linear-gradient(to bottom, rgb(33, 47, 61) 50%, rgb(247, 220, 111) 50%, rgba(247, 220, 111) 50%) fixed;
 }
 
-button {
-  font: inherit;
-  cursor: pointer;
-  padding: 0.5rem 1.5rem;
-  border-radius: 6px;
-  background-color: transparent;
-  color: #1a8ed1;
-  border: 1px solid #1a8ed1;
+.scrollable-element {
+  scrollbar-color: red black;
+}
+/* width */
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+/* Track */
+
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey;
+  border-radius: 10px;
+}
+/* Handle */
+
+::-webkit-scrollbar-thumb {
+  background: #566573;
+  border-radius: 10px;
+}
+/* Handle on hover */
+
+::-webkit-scrollbar-thumb:hover {
+  background: #283747;
+}
+.add {
+  color: #F39C12;
 }
 
-button:hover,
-button:active {
-  background-color: #1ac5d1;
-  border-color: #1ac5d1;
+.icon {
+  margin: 0 0.5em;
+}
+
+
+.main {
+  display:grid;
+  padding: 2rem;
+  width: 30vw;
+  height:70vh;
+  color:black;
+  border-radius: 2rem;
+  background: #c1c7cc;
+
+  -webkit-box-shadow: 5px 5px 5px rgba(68, 68, 68, 0.6);
+          box-shadow: 5px 5px 5px rgba(68, 68, 68, 0.6);
+}
+
+
+.content {
   color: white;
+}
+
+.content .tasks {
+  padding: 10px;
+  list-style: none;
+}
+
+.content .tasks h2 {
+  text-align: center;
+  color: black;
+  font-family: 'Roboto', sans-serif;
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.content .tasks .scroll {
+  margin: 4px, 4px;
+  padding: 4px;
+  width: inherit;
+  height: 200px;
+  overflow-x: hidden;
+  overflow-y: auto;
+  text-align: justify;
+}
+
+.content .tasks .scroll div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: start;
+}
+
+.content .tasks .scroll div .text-sm {
+  text-align: center;
+  margin-top: 1px;
+  font-size: smaller;
+  font-weight: 100;
+}
+
+.content .tasks .scrollable-element {
+  scrollbar-color: red black;
+}
+
+.content .tasks div {
+  margin-top: 10px;
+  
+}
+
+
+.content .form-group {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 50px;
+}
+
+.content .form-group .search-input {
+  border-right: 0;
+  width:100%
+}
+
+.content .form-group .search-icon {
+  border-left: 0 solid transparent;
+  background: transparent;
+}
+
+.content .form-group .icon {
+  margin: 0 0.5em;
+}
+/*# sourceMappingURL=main.css.map */
+span{
+  display: flex;
+  justify-content:space-evenly;
+}
+
+.btns a{
+  margin: 0 0.3rem;
+}
+.btns{
+  margin: 0 2rem;
+}
+
+input:focus{
+  outline:none;  
+}
+input{
+  border-radius: 1rem;
+  border:none;
+  padding: 0.5rem;
+}
+contet{
+  width: 100%;
+}
+button{
+  padding: 0.5rem;
+  border-radius: 1rem;
+  border: none;
+
+}
+button:hover{
+  background: grey;
+  color: white;
+
+}
+span input{
+  margin: 0 0.3rem;
+}
+label{
+  color:black;
+
 }

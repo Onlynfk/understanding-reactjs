@@ -1,0 +1,124 @@
+.work_image {
+  width: 10px;
+  overflow: hidden;
+}
+
+.works {
+  overflow: hidden;
+  overflow-y: hidden;
+}
+
+.works > h5 {
+  font-size: 30px;
+}
+.works__title {
+  font-size: 20px;
+}
+
+.works__image {
+  object-fit: contain;
+  width: 100%;
+  height: 100% !important;
+}
+
+.works > p {
+  font-weight: 500;
+}
+
+.works__bg {
+  border: none;
+  color: #808b96;
+}
+.works__bg {
+}
+
+.works__bg:hover {
+  color: white;
+  transition: all 0.2s;
+  transform: scale(1);
+  box-shadow: 0 4px 60px rgba(9, 10, 112, 0.5);
+
+}
+.works__bg:hover .button_me {
+  color: white;
+  border: 1px transparent rgb(4, 4, 48);
+  background-color: #23292c;
+  border-radius: 6px;
+  padding: 5px;
+  margin: 4px;
+  font-size: 12px;
+
+}
+
+.works__bg .button_me {
+  padding: 5px;
+  margin: 4px;
+  color: white !important;
+  text-decoration-style: underline;
+  color: white !important;
+  border: 1px transparent rgb(32, 32, 37);
+  background-color: #23292c;
+  border-radius: 6px;
+  padding: 5px;
+  margin: 4px;
+  font-size: 12px;
+}
+@media screen and (max-width: 768px) {
+}
+.card-img-top {
+  width: 100%;
+  object-fit: cover;
+}
+
+.skills {
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.experience_header {
+  align-items: center;
+  border: 1px transparent #34495e;
+  padding: 5px;
+  font-size: 20px;
+}
+
+.skills__box {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: space-around;
+  overflow: hidden;
+  margin-bottom: 20px;
+}
+
+.skills_set {
+  cursor: pointer;
+}
+
+.skills_set:hover {
+  cursor: pointer;
+  border: 1px transparent #34495e;
+  box-shadow: 5px 10px #949ea5;
+  transition: all 2s;
+}
+
+.about {
+  padding: 30px;
+  line-height: 40px;
+}
+
+.create {
+  padding: 2em;
+  border-radius: 10px;
+  cursor: pointer;
+  width: 100%;
+  color: inherit;
+  background-color: grey;
+}
+
+.create:hover {
+  transition: all 0.2s;
+  background-color: rgb(14, 13, 13);
+}
